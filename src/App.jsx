@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import './App.css';
-import Cadastro from './Components/Cadastro/Cadastro';
+import Register from './Components/Cadastro/Register';
 import Login from './Components/Login/Login';
+import Feed from './Components/Feed/Feed';
 import './index.css';
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
             <Routes>
                <Route path='/' element={<Navigate to='/login' />} />
                <Route path='/login' element={<Login />} />
-               <Route path='/cadastro' element={<Cadastro />} />
+               <Route path='/register' element={<Register />} />
+               <Route path='/feed' element={<Feed />} />
             </Routes>
          </Router>
       </div>

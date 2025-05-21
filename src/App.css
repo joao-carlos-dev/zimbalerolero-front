@@ -11,7 +11,17 @@
     justify-content: center;
     align-items:  center;
     min-height: 100vh;
-    background-image: url("assets/imagem-fundo.webp");
+    background-image: url("assets/img_fundo.png");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+}
+
+:root {
+    --cor-fundoLogin: rgba(32, 5, 182, 0.603);
+    --cor-borda: rgba(194, 191, 5, 0.61);
+    --cor-texto: #fff;
+    --cor-boxShadow: rgba(145, 161, 2, 0.836);
+    --cor-fundoButton:  rgba(124, 172, 194, 0.712);
+    --cor-hoverButton:  rgb(87, 147, 236);
 }

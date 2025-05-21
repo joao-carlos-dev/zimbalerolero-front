@@ -1,0 +1,135 @@
+/* Feed.css */
+.feed-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  color: #0f1419;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e1e8ed;
+  padding-bottom: 10px;
+  text-shadow: none;
+}
+
+.novo-post textarea {
+  width: 100%;
+  border: none;
+  resize: none;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f5f8fa;
+  text-shadow: none;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.novo-post textarea:focus {
+  outline: none;
+  background-color: #e8f5fe;
+}
+
+.novo-post button {
+  background-color: #1d9bf0;
+  color: white;
+  text-shadow: none;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-weight: bold;
+  float: right;
+}
+
+.novo-post button:hover {
+  background-color: #1a8cd8;
+}
+
+.lista-posts {
+  margin-top: 30px;
+}
+
+.post {
+  border-bottom: 1px solid #e1e8ed;
+  padding: 16px 0;
+  
+}
+
+.post strong {
+  font-weight: 600;
+  text-shadow: none;
+}
+
+.post p {
+  margin: 6px 0;
+  font-size: 15px;
+  text-shadow: none;
+}
+
+.post small {
+  color: #657786;
+  font-size: 13px;
+  text-shadow: none;
+}
+
+.post-actions {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  
+}
+
+.post-actions span {
+  text-shadow: none;
+}
+
+.post-actions button {
+  background: none;
+  border: none;
+  color: #1d9bf0;
+  text-shadow: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.post-actions button:hover {
+  text-decoration: underline;
+}
+
+.comentarios {
+  margin-top: 10px;
+  padding-left: 20px;
+  border-left: 2px solid #e1e8ed;
+  text-shadow: none;
+}
+
+.comentarios textarea {
+  width: 100%;
+  margin-top: 6px;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #e1e8ed;
+  text-shadow: none;
+  resize: none;
+}
+
+.comentarios button {
+  margin-top: 6px;
+  padding: 6px 12px;
+  background-color: #1d9bf0;
+  color: white;
+  text-shadow: none;
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.comentarios button:hover {
+  background-color: #1a8cd8;
+}
