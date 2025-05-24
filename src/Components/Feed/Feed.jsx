@@ -3,7 +3,7 @@ import './Feed.css';
 import Header from '../Header/Header';
 import axios from 'axios';
 
-const API_BASE_URL = 'joaocarloz.pythonanywhere.com/api';
+const API_BASE_URL = 'https://joaocarloz.pythonanywhere.com/api';
 
 function Feed() {
   // Estados para o Feed de Posts

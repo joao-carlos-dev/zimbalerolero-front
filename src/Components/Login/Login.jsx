@@ -20,7 +20,7 @@ function Login({ setCurrentUser, setFeedPosts }) {
     event.preventDefault();
 
     try {
-      const response = await axios.post('joaocarloz.pythonanywhere.com/api/token/', {
+      const response = await axios.post('https://joaocarloz.pythonanywhere.com/api/token/', {
         email, // Usando a sintaxe shorthand para cleaner code
         password,
       });
@@ -47,14 +47,14 @@ function Login({ setCurrentUser, setFeedPosts }) {
 
       // Busca dados do usuário logado
       const userRes = await axios.get(
-        'joaocarloz.pythonanywhere.com/api/accounts/profile/'
+        'https://joaocarloz.pythonanywhere.com/api/accounts/profile/'
       );
       if (typeof setCurrentUser === 'function') {
         setCurrentUser(userRes.data);
       }
 
       // Busca o feed do usuário logado
-      const feedRes = await axios.get('joaocarloz.pythonanywhere.com/api/posts/feed/');
+      const feedRes = await axios.get('https://joaocarloz.pythonanywhere.com/api/posts/feed/');
       if (typeof setFeedPosts === 'function') {
         setFeedPosts(feedRes.data);
       }
@@ -62,10 +62,7 @@ function Login({ setCurrentUser, setFeedPosts }) {
       // Alerta de sucesso e redirecionamento, como no primeiro código
       alert('Login realizado com sucesso!');
       navigate('/feed');
-
-      // Opcional: Removi o alert e console.log que estavam fora do try/catch no primeiro exemplo,
-      // pois eles seriam executados independentemente do sucesso do login e o 'username' não estava definido.
-      // Se precisar de logs, coloque-os aqui dentro do bloco try após o sucesso.
+      
       console.log('Login bem-sucedido. Dados do usuário e feed carregados.');
     } catch (error) {
       // Tratamento de erros aprimorado
