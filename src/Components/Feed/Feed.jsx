@@ -32,7 +32,7 @@ function Feed() {
   const handleLogout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
-    window.location.href = `${API_BASE_URL}/login/`;
+    window.location.href = ('/login');
   };
 
   // RECARREGA o feed do INÍCIO (primeira página)
