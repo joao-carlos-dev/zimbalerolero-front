@@ -32,10 +32,8 @@ function Feed() {
   const handleLogout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
-    window.location.href = '/login'; // Considerar usar React Router para navegação
+    window.location.href = 'api/login';
   };
-
-  // --- Funções relacionadas ao FEED DE POSTS ---
 
   // RECARREGA o feed do INÍCIO (primeira página)
   const refreshFeed = useCallback(async () => {
@@ -259,7 +257,6 @@ function Feed() {
     }
   };
 
-  // --- RENDERIZAÇÃO ---
   if (!token) {
     return (
       <div className="feed-container">
