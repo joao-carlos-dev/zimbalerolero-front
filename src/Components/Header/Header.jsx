@@ -8,7 +8,7 @@ const Header =  ({ token, onLogout }) => {
   useEffect(() => {
     const fetchUser = async () => {
       try {
-        const res = await axios.get("http://localhost:8000/api/accounts/profile/", {
+        const res = await axios.get("joaocarloz.pythonanywhere.com/api/accounts/profile/", {
           headers: {
             Authorization: `Bearer ${token}`,
           },

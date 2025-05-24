@@ -20,7 +20,7 @@ function Login({ setCurrentUser, setFeedPosts }) {
     event.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:8000/api/token/', {
+      const response = await axios.post('joaocarloz.pythonanywhere.com/api/token/', {
         email, // Usando a sintaxe shorthand para cleaner code
         password,
       });
@@ -47,14 +47,14 @@ function Login({ setCurrentUser, setFeedPosts }) {
 
       // Busca dados do usuário logado
       const userRes = await axios.get(
-        'http://localhost:8000/api/accounts/profile/'
+        'joaocarloz.pythonanywhere.com/api/accounts/profile/'
       );
       if (typeof setCurrentUser === 'function') {
         setCurrentUser(userRes.data);
       }
 
       // Busca o feed do usuário logado
-      const feedRes = await axios.get('http://localhost:8000/api/posts/feed/');
+      const feedRes = await axios.get('joaocarloz.pythonanywhere.com/api/posts/feed/');
       if (typeof setFeedPosts === 'function') {
         setFeedPosts(feedRes.data);
       }
