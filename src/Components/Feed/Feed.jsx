@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Feed.css';
 import Header from '../Header/Header';
 import axios from 'axios';
@@ -6,6 +7,7 @@ import axios from 'axios';
 const API_BASE_URL = 'https://joaocarloz.pythonanywhere.com/api';
 
 function Feed() {
+  const navigate = useNavigate();
   // Estados para o Feed de Posts
   const [posts, setPosts] = useState([]);
   const [feedNextPage, setFeedNextPage] = useState(
@@ -32,7 +34,7 @@ function Feed() {
   const handleLogout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
-    window.location.href = ('/login');
+    navigate('/login');
   };
 
   // RECARREGA o feed do INÍCIO (primeira página)
