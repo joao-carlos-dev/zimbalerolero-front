@@ -30,7 +30,7 @@ function Register() {
             return;
         }
         try {
-            const response = await fetch('joaocarloz.pythonanywhere.com/api/accounts/register/', {
+            const response = await fetch('https://joaocarloz.pythonanywhere.com/api/accounts/register/', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
